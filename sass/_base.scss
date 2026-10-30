@@ -21,25 +21,12 @@ body {
   color: $color-accent-darkest;
   background-color: $color-white;
   letter-spacing: 1.35px;
-}
-
-.background {
-  background-color: $color-grey;
-}
-
-.container {
-  max-width: $max-width;
-  margin: 0 auto;
-  background-color: $color-tint;
-  // height: 100vh;
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 .page {
-    // height: 100vh;
-    // min-height: 100dvh;
-    padding: 0;
-    max-width: $max-width;
-    overflow-x: hidden;
-    margin: 0 auto;
+  padding: 0;
+  max-width: $max-width;
+  margin: 0 auto;
+  overflow-x: clip;
 }
