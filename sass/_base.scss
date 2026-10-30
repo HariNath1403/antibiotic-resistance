@@ -24,12 +24,12 @@ body {
   overflow-x: clip;
 }
 
-// .page {
-//   // min-height: 100dvh;
-//   height: auto;
-//   padding: 0;
-//   max-width: $max-width;
-//   margin: 0 auto;
-//   overflow-x: clip;
-//   overflow-y: visible;
-// }
+.page {
+  min-height: 100dvh;
+  height: auto;
+  padding: 0;
+  max-width: $max-width;
+  margin: 0 auto;
+  overflow-x: clip;
+  overflow-y: visible;
+}
