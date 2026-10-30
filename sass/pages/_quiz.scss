@@ -1,0 +1,71 @@
+@use "../abstract" as *;
+@use "../components" as *;
+
+.quiz {
+    height: 70%;
+    background-color: $color-accent;
+    color: $color-background;
+    padding: $space-margin $space-compact;
+
+    * {
+        margin-bottom: $space-sub;
+    }
+
+    &__header {
+        @include flex-column;
+        gap: $space-small;
+        text-align: center;
+
+        &--icon {
+            font-size: $text-large;
+        }
+
+        &--title {
+            @include header-title-sub;
+        }
+    }
+
+    &__caption {
+        @include text-body;
+        font-size: $text-body-small;
+        text-align: justify;
+    }
+
+    &__details {
+        @include flex-center;
+        gap: $space-small;
+        list-style: none;
+        transform: scale(1.15);
+
+        &--index {
+            @include flex-center;
+            gap: $space-tiny;
+
+            &--icon {
+                font-size: $text-mini;
+            }
+
+            &--desc {
+                font-size: $text-tiny;
+                font-weight: 300;
+            }
+        }
+    }
+
+    &__cta {
+        @include flex-center;
+
+        &--btn {
+            padding: $space-mini $space-small;
+            font-size: $text-small;
+            font-weight: 600;
+            text-decoration: none;
+            letter-spacing: 2.5px;
+            background-color: $color-main;
+            color: $color-background;
+            border: 0;
+            border-radius: 9px;
+            box-shadow: 0 1rem 1rem rgba($color-black, 0.15);
+        }
+    }
+}

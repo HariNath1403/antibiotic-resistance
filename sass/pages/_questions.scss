@@ -1,0 +1,170 @@
+@use "../abstract" as *;
+@use "../components" as *;
+
+.questions {
+    padding: $space-sub $space-compact;
+    background-color: $color-accent;
+    color: $color-background;
+    position: relative;
+
+    &__header {
+        @include flex-column;
+        gap: $space-small;
+
+        &--main {
+            @include header-title;
+            font-size: $text-emphasize;
+        }
+
+        &--caption {
+            @include text-body;
+            font-size: $text-body-small;
+        }
+    }
+
+    &__form {
+        @include flex-column;
+        align-items: flex-start;
+        gap: $space-regular;
+        margin-top: $space-regular;
+
+        &--question {
+            @include flex-column;
+            align-items: flex-start;
+            gap: $space-mini;
+            width: 100%;
+            padding: $space-tiny $space-mini;
+
+            legend {
+                margin-bottom: $space-mini;
+                font-size: $text-body-small;
+                font-weight: 300;
+                line-height: 1.4;
+                padding: 0 $space-mini;
+            }
+
+            label {
+                font-size: $text-mini;
+                font-weight: 300;
+                line-height: 1.2;
+                padding: 0 $space-mini;
+
+                @include flex-center;
+                gap: $space-tiny;
+            }
+        }
+
+        &--submit {
+            margin: $space-mini;
+            padding: $space-tiny $space-small;
+            border: none;
+            border-radius: 9px;
+            box-shadow: 0 1rem 1rem rgba($color-black, 0.05);
+            background-color: $color-main;
+            color: $color-background;
+            font-size: $text-body-small;
+            font-weight: 300;
+            letter-spacing: 2.5px; 
+        }
+    }
+
+    &__exit {
+        position: absolute;
+        top: $space-compact;
+        right: $space-compact;
+        padding: $space-micro $space-tiny;
+        border: 0;
+        box-shadow: 0 1rem 1rem rgba($color-black, 0.025);
+        background-color: $color-error;
+        color: $color-background;
+        font-size: $text-small;
+        text-decoration: none;
+    }
+}
+
+.results {
+    height: 100%;
+    background-color: $color-background;
+    color: $color-accent-darkest;
+    @include flex-column;
+    justify-content: flex-start;
+    padding: $space-large $space-small;
+
+    &__header {
+        @include flex-column;
+        gap: $space-compact;
+        text-align: center;
+
+        &--icon {
+            font-size: $text-header-sub;
+            color: $color-accent;
+        }
+
+        &--main {
+            // @include header-title-sub;
+            font-size: $text-emphasize;
+        }
+    }
+
+    &__score {
+        margin-top: $space-standard;
+        @include flex-column;
+        gap: $space-compact;
+
+        &--header {
+            @include header-main;
+            // font-size: $text-big;
+            color: $color-accent;
+        }
+
+        &--summary {
+            @include flex-center;
+            justify-content: space-between;
+            width: 75%;
+        }
+
+        &--progress {
+            width: 75%;
+            height: 1.2rem;
+            background-color: $color-grey;
+            border-radius: 10rem;
+            overflow: hidden;
+            margin: $space-small 0;
+            position: relative;
+
+            &--fill {
+                width: 80%;
+                height: 100%;
+                background-color: $color-accent;
+                border-radius: inherit;
+                transition: width 0.6s ease-in-out;
+            }
+        }
+
+        &--desc {
+            @include text-body;
+            font-size: $text-body-small;
+            font-weight: 400;
+            line-height: 1.6;
+            text-align: center;
+        }
+    }
+
+    &__exit {
+        margin: $space-standard;
+
+        &--btn {
+            padding: $space-tiny $space-small;
+            border: none;
+            border-radius: 9px;
+            box-shadow: 0 1rem 1rem rgba($color-black, 0.05);
+            color: $color-background;
+            background-color: $color-accent;
+            text-decoration: none;
+            font-size: $text-small;
+            font-weight: 300;
+            letter-spacing: 2.5px; 
+        }
+        
+    }
+}

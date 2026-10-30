@@ -1,0 +1,44 @@
+@use "abstract" as *;
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: $text-small;
+  font-weight: 400;
+  color: $color-shade;
+  color: $color-accent-darkest;
+  background-color: $color-white;
+  letter-spacing: 1.35px;
+}
+
+.background {
+  background-color: $color-grey;
+}
+
+.container {
+  max-width: $max-width;
+  margin: 0 auto;
+  background-color: $color-tint;
+  // height: 100vh;
+  overflow-x: hidden;
+}
+
+.page {
+    height: 100vh;
+    padding: 0;
+    max-width: $max-width;
+    overflow-x: hidden;
+    margin: 0 auto;
+}

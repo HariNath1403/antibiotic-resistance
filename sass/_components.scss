@@ -1,0 +1,116 @@
+@use "abstract" as *;
+@use "base" as *;
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin header-main {
+    font-size: $text-header-large;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+@mixin header-title {
+    font-size: $text-medium-large;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+@mixin header-title-sub {
+    @include header-title;
+    font-size: $text-body;
+    line-height: 1.4;
+    text-align: center;
+}
+
+@mixin header-caption {
+    font-size: $text-body;
+    font-size: $text-body-small;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+@mixin header-supplementary {
+    font-size: $text-medium;
+    font-weight: 300;
+    letter-spacing: 3.5px;
+    text-transform: uppercase;
+}
+
+@mixin text-body {
+    font-size: $text-mini;
+    font-weight: 300;
+    line-height: 1.8;
+}
+
+@mixin text-underline {
+     &::after {
+        content: "";
+        position: absolute;
+        bottom: -50%;
+        left: 50%;
+
+        transform: translateX(-50%);
+
+        width: 35%;
+        height: 0.5rem;
+        background-color: $color-accent;
+    }
+}
+
+@mixin text-underline-color {
+     &::after {
+        content: "";
+        position: absolute;
+        bottom: -50%;
+        left: 50%;
+
+        transform: translateX(-50%);
+
+        width: 35%;
+        height: 0.5rem;
+        background-color: inherit;
+    }
+}
+
+@mixin text-underline-full-white {
+     &::after {
+        content: "";
+        position: absolute;
+        bottom: 10%;
+        left: 50%;
+
+        transform: translateX(-50%);
+
+        width: 42.5%;
+        height: 0.25rem;
+        background-color: $color-background;
+    }
+}
+
+// For effects - loading pages
+
+[hidden] {
+  display: none !important;
+}
+
+.page {
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
+}
+
+.section-hide {
+  opacity: 0;
+  transform: translateY(8rem);
+}

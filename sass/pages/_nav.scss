@@ -1,0 +1,41 @@
+@use "../abstract" as *;
+@use "../components" as *;
+
+.nav {
+    height: 7.5rem;
+    background-color: $color-accent-darkest;
+    padding: $space-mini $space-compact;
+
+    @include flex-center;
+    justify-content: space-between;
+
+    &__list {
+        @include flex-center;
+        gap: $space-mini;
+        list-style: none;
+
+        &--link {
+            color: $color-background;
+            font-size: $text-mini;
+            
+            &--anchor {
+                color: inherit;
+                text-decoration: none;
+                padding: $space-micro;
+                font-size: $text-medium;
+                // border-bottom: 1px solid $color-background;
+            }
+        }
+    }
+
+    &__cta {
+        &--quiz {
+            text-decoration: none;
+            font-size: $text-body-small;
+            padding: $space-micro $space-tiny;
+            color: $color-background;
+            background-color: $color-main;
+            border-radius: 3px;
+        }
+    }
+}

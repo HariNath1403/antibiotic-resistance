@@ -1,0 +1,104 @@
+// / 1. Colors
+  // Primary colours - Coral Red
+ $color-main: #e76b58;
+ $color-main-dark: #c94e40;
+ $color-main-darkest: #96362f;
+
+ // Accent colours - Muted Teal
+ $color-accent: #368f94;
+ $color-accent-darkest: #102f38;
+
+ // Supporting colours
+ $color-shade: #08181c;
+ $color-tint: #fff7f1;
+ $color-grey: #e5eeec;
+ $color-white: #ffffff;
+ $color-black: #000000;
+ $color-background: #fff8f5;
+
+ // Semantic colours
+ $color-success: #2e7d32;
+ $color-success-light: #e8f5e9;
+
+ $color-warning: #ed9b26;
+ $color-warning-light: #fff4db;
+
+ $color-error: #c62828;
+ $color-error-light: #ffebee;
+
+ $color-info: #1976d2;
+ $color-info-light: #e3f2fd;
+
+ // Development / Testing
+ $color-testing: orangered;
+
+
+ // 2. Font sizes
+ // Based on html { font-size: 62.5%; }
+ // 1rem = 10px
+
+ // Extra large headings
+ $text-display: 8rem;          // 80px
+ $text-hero: 7.2rem;           // 72px
+ $text-header-main: 6.4rem;    // 64px
+ $text-header-large: 5.6rem;   // 56px
+ $text-header-sub: 4.8rem;     // 48px
+ $text-header-small: 4.2rem;   // 42px
+
+ // Large text
+ $text-big: 3.6rem;            // 36px
+ $text-large: 3.2rem;          // 32px
+ $text-medium-large: 2.8rem;   // 28px
+ $text-emphasize: 2.4rem;      // 24px
+ $text-medium: 2.2rem;         // 22px
+
+ // Body text
+ $text-standard: 2rem;         // 20px
+ $text-body: 1.8rem;           // 18px
+ $text-small: 1.6rem;          // 16px
+ $text-body-small: 1.4rem;     // 14px
+
+ // Small text
+ $text-mini: 1.2rem;           // 12px
+ $text-tiny: 1rem;             // 10px
+ $text-supersmall: 0.8rem;     // 8px
+
+
+
+ // 3. Whitespace
+ // Based on html { font-size: 62.5%; }
+ // 1rem = 10px
+
+ // Extra large spacing
+ $space-hero: 16rem;          // 160px
+ $space-huge: 14.4rem;        // 144px
+ $space-big: 12.8rem;         // 128px
+ $space-extra-large: 10.8rem; // 108px
+ $space-large: 9.6rem;        // 96px
+ $space-widegap: 8.4rem;      // 84px
+
+ // Large spacing
+ $space-decent: 7.2rem;       // 72px
+ $space-large-margin: 6.4rem; // 64px
+ $space-margin: 5.6rem;       // 56px
+ $space-standard: 4.8rem;     // 48px
+ $space-medium: 4.2rem;       // 42px
+ $space-gap: 3.6rem;          // 36px
+
+ // Medium spacing
+ $space-medium-small: 3.2rem; // 32px
+ $space-sub: 2.8rem;          // 28px
+ $space-regular: 2.4rem;      // 24px
+ $space-compact: 2rem;        // 20px
+ $space-small: 1.6rem;        // 16px
+
+ // Small spacing
+ $space-mini: 1.2rem;         // 12px
+ $space-tiny: 0.8rem;         // 8px
+ $space-supersmall: 0.6rem;   // 6px
+ $space-micro: 0.4rem;        // 4px
+ $space-minimal: 0.2rem;      // 2px
+
+
+// 4. Screen Width
+$max-width: 52.5rem;

@@ -1,0 +1,127 @@
+@use "../abstract" as *;
+@use "../base" as *;
+@use "../components" as *;
+
+.home {
+    &__box {
+
+        &--content {
+            width: 100%;
+            height: 65vh;
+            text-align: center;
+            background-color: $color-tint;
+            background-image: linear-gradient(
+                rgba($color-background, 0.65),
+                rgba($color-background, 0.15)
+            ),
+            url("../imgs/background/img-1.jpg");
+            background-size: cover;
+            background-position: top;
+            background-repeat: no-repeat;
+            @include flex-column;
+            
+
+            &--txt {
+                @include flex-column;
+                gap: $space-medium-small;
+                padding: $space-decent;
+                
+                position: relative;
+                z-index: 1;
+                text-align: center;
+
+
+                &--header {
+                    @include header-main;
+                    line-height: 1;
+                    color: $color-shade; 
+                }
+
+                &--sub {
+                    @include header-caption;
+                    color: $color-accent-darkest;
+                    letter-spacing: 10px;
+                    line-height: 2.4;
+                    padding: $space-small;
+                    background-color: rgba($color-tint, 0.75);
+                }
+            }
+        }
+    }
+
+    &__accordance {
+        padding: $space-medium-small 0;
+        text-align: center;
+        @include flex-column;
+        gap: $space-tiny   ;
+
+        &--header {
+            @include header-supplementary;
+            line-height: 1;
+        }
+
+        &--box {
+            &--list {
+                @include flex-center;
+                gap: $space-mini;
+                list-style: none;
+                margin-right: $space-small;
+
+                &--item {
+                        width: 10rem;
+                        &:first-child{
+                            width: 12.5rem;
+                        }
+
+                    img {
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.loader {
+    &__box {
+        background-image: linear-gradient(
+                rgba($color-background, 0.05),
+                rgba($color-background, 0.15)
+            ),
+            url("../imgs/background/img-1.jpg");
+        height: 55vh;
+        width: 100%;
+        background-size: cover;
+        background-position: top;
+        background-repeat: no-repeat;
+    }
+
+    &__txt {
+        @include flex-column;
+        gap: $space-small;
+        text-align: center;
+        padding: $space-small;
+        margin-bottom: $space-standard;
+
+        &--header {
+            @include header-supplementary;
+            line-height: 1.6;
+            margin-bottom: $space-sub;
+            position: relative;
+
+           @include text-underline-color;
+        }
+
+        &--desc {
+            @include text-body;
+            text-align: justify;
+
+            &--bold {
+                padding: $space-micro $space-supersmall;
+                background-color: $color-main;
+                color: $color-tint;
+            }
+        }
+    }
+}

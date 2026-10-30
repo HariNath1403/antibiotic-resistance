@@ -1,0 +1,98 @@
+@use "../abstract" as *;
+@use "../components" as *;
+
+.footer {
+    height: 30%;
+    padding: $space-regular $space-small;
+    background-color: $color-accent-darkest;
+    color: $color-background;
+
+    &__container {
+        @include flex-center;
+        // gap: $space-mini;
+        align-items: flex-start;
+        padding-bottom: $space-sub;
+        border-bottom: 0.1rem solid $color-background;
+    }
+
+    &__left {
+        width: 45%;
+        @include flex-column;
+        align-items: flex-start;
+        gap: $space-mini;
+
+        &--header {
+            font-size: $text-mini;
+            font-weight: 500;
+            text-transform: uppercase;
+        }
+
+        &--list {
+            @include flex-column;
+            margin-left: $space-tiny;
+            gap: $space-micro;
+            list-style: none;
+            font-size: $text-mini;
+
+            &--link {
+
+                &--anchor {
+                    color: $color-background;
+                }
+            }
+        }
+    }
+
+    &__right {
+        width: 55%;
+        @include flex-column;
+        align-items: flex-start;
+        gap: $space-mini;
+
+        &--header {
+            font-size: $text-mini;
+            font-weight: 500;
+            text-transform: uppercase;
+        }
+
+        &--list {
+            @include flex-column;
+            margin-left: $space-tiny;
+            align-items: flex-start;
+            gap: $space-tiny;
+            list-style: none;
+            font-size: $text-mini;
+            
+            
+            &--index {
+                list-style: none;
+                font-size: $text-tiny;
+
+
+                &--main {
+                    font-weight: 500;
+                    text-transform: uppercase;
+                    margin-bottom: $space-tiny;
+                }
+
+                &--sub {
+                    font-size: calc(#{$text-supersmall + $text-tiny}/2);
+                    font-size: $text-tiny;
+                    font-weight: 300;
+                    margin-left: $space-small;
+                }
+            }
+        }
+    }
+
+    &__foot {
+        margin-top: $space-small;
+
+        &--note {
+            font-size: $text-tiny;
+            font-weight: 300;
+            text-align: center;
+            line-height: 1.8;
+        }
+    }
+}

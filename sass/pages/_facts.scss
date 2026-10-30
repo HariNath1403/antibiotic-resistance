@@ -1,0 +1,83 @@
+@use "../abstract" as *;
+@use "../components" as *;
+
+.facts {
+    @include flex-column; 
+    gap: $space-standard;
+    padding: $space-standard $space-tiny;
+
+    &__header {
+        @include header-title;
+        font-size: $text-medium;
+        position: relative;
+        color: $color-background;
+        background-color: $color-main;
+        padding: $space-tiny;
+        
+        @include text-underline-color;
+    }
+    
+    &__slider {
+        @include flex-center;
+        gap: $space-mini;
+        width: 100%;
+
+        &--box {
+            position: relative;
+            width: 85%;
+            height: 70rem;
+            overflow: hidden;
+        }
+
+        &--btn {
+            border: 0;
+            border-radius: 50%;
+            padding: $space-mini $space-small;
+            background-color: $color-main;
+            color: $color-background;
+            transform: translateY(-$space-extra-large);
+
+            &--icon {
+                font-size: $text-body;
+                font-weight: 500;
+            }
+        }
+
+        &--slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.5s ease-in-out;
+            padding: $space-tiny;
+
+            @include flex-column;
+            gap: $space-medium-small;
+
+            &--img {
+                width: 100%;
+                height: auto;
+                object-fit: cover;
+                border-radius: 50%;
+                box-shadow: 0 1rem 1rem rgba($color-black, 0.1);
+            }
+
+            &--header {
+                @include header-title-sub;
+                color: $color-background;
+                background-color: $color-main;
+                padding: $space-micro $space-tiny;
+            }
+
+            &--text {
+                @include text-body;
+                font-weight: 300;
+                text-align: justify;
+                color: $color-main-darkest;
+                padding: 0 $space-small;
+                line-height: 1.8;
+            }
+        }
+    }
+}

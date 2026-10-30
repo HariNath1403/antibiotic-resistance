@@ -1,0 +1,93 @@
+@use "../abstract" as *;
+@use "../components" as *;
+
+.features {
+    height: 100vh;
+    background-color: $color-accent;
+
+    &__header {
+        @include header-title;
+        text-align: center;
+        color: $color-background;
+        padding: $space-medium-small;
+        position: relative;
+
+        @include text-underline-full-white;
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: $space-compact;
+        padding: $space-compact;
+
+        &--card {
+            text-align: center;
+            color: $color-accent-darkest;
+            background-color: $color-background;
+            height: 20rem;
+            padding: $space-small;
+            border-radius: 3px;
+            box-shadow: 0 1rem 2rem rgba($color-black, 0.25);
+            perspective: 1000px;
+            position: relative;
+
+            &--front, &--rear {
+                @include flex-column;
+                position: absolute;
+                inset: 0;
+                padding: $space-tiny;
+                backface-visibility: hidden;
+                transition: transform 0.7s;
+            }
+
+            &--front {
+                gap: $space-sub;
+                transform: rotateY(0deg);
+
+            }
+
+            &--rear {
+                transform: rotateY(180deg);
+            }
+
+            &.is-flipped {
+                .features__grid--card--front {
+                    transform: rotateY(-180deg);
+                }
+
+                .features__grid--card--rear {
+                    transform: rotateY(0deg);
+                }
+            }
+
+            &--icon {
+                font-size: $text-medium-large;
+            }
+
+            &--title {
+                font-size: $text-mini;
+                font-weight: 700;
+                text-transform: capitalize;
+            }
+
+            &--btn {
+                padding: $space-tiny $space-small;
+                border: none;
+                border-radius: 3px;
+                background-color: $color-accent-darkest;
+                color: $color-background;
+            }
+
+            &--desc {
+                font-size: $text-mini;
+                font-weight: 400;
+                text-align: justify;
+                line-height: 1.4;
+                color: $color-accent-darkest;
+
+            }
+        }
+    }
+}
+   
