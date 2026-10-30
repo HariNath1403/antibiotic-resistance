@@ -25,7 +25,8 @@ body {
 }
 
 .page {
-  height: 100vh;
+  // min-height: 100dvh;
+  height: auto;
   padding: 0;
   max-width: $max-width;
   margin: 0 auto;
